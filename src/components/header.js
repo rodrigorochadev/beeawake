@@ -2,33 +2,33 @@ import { Link } from "gatsby"
 import PropTypes from "prop-types"
 import React from "react"
 
-const Header = ({ siteTitle }) => (
-  <header
-    style={{
-      background: `rebeccapurple`,
-      marginBottom: `1.45rem`,
-    }}
-  >
-    <div
-      style={{
-        margin: `0 auto`,
-        maxWidth: 960,
-        padding: `1.45rem 1.0875rem`,
-      }}
-    >
-      <h1 style={{ margin: 0 }}>
-        <Link
-          to="/"
-          style={{
-            color: `white`,
-            textDecoration: `none`,
-          }}
-        >
-          {siteTitle}
+import logo from '../assets/images/logo/logo.svg'
+import { HeaderS, Logo, Menu } from "../styles/headerStyles"
+
+const Header = () => (  
+  <HeaderS >
+      <Menu>
+        <ul>
+          <li><Link to="/">Inspire</Link></li>
+          <li><Link to="/">Healthy</Link></li>
+          
+        </ul>
+      </Menu>
+      <Logo>
+        <Link to="/">
+          <img src={logo} alt="Bee Awake" />
         </Link>
-      </h1>
-    </div>
-  </header>
+      </Logo>
+      <Menu>
+        <ul>
+          <li><Link to="/">Sobre</Link></li>
+          <li><Link to="/">Contactos</Link></li>
+        </ul>
+      </Menu>
+      {/* <Hamburger>
+        Menu
+      </Hamburger> */}
+  </HeaderS>
 )
 
 Header.propTypes = {

@@ -1,0 +1,1 @@
+export const beeAwakeColor = '#15d6c9'
